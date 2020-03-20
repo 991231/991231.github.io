@@ -19,7 +19,6 @@ function plotTotalDownload() {
       labels: {
         useHTML: true,
         formatter: function() {
-          console.log(this);
           return {
             Tiktok: "<img src='./images/tiktok_logo.png' style='width:35px'>",
             Facebook: "<img src='./images/facebook.png' style='width:32px'>",
@@ -521,3 +520,71 @@ function init() {
   plotStatsCharts();
 }
 document.addEventListener("DOMContentLoaded", init, false);
+
+/*
+
+function plotMarketShares() {
+  let data = [];
+  let config = {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      backgroundColor: '#f7f7f7',
+      type: 'pie'
+    },
+    title: {
+      text: 'Social Network Market Shares'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+      point: {
+        valueSuffix: '%'
+      }
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+        }
+      }
+    },
+    series: [
+      {
+        name: 'Social Network Services',
+        colorByPoint: true,
+        data: [
+          {
+            name: 'TikTok',
+            y: 61.41,
+            sliced: true,
+            selected: true
+          },
+          {
+            name: 'Facebook',
+            y: 11.84
+          },
+          {
+            name: 'Twitter',
+            y: 10.85
+          },
+          {
+            name: 'Wechat',
+            y: 4.67
+          },
+          {
+            name: 'Other',
+            y: 2.61
+          }
+        ]
+      }
+    ]
+  };
+  Highcharts.chart('chart-market-shares', config);
+}
+*/
