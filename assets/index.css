@@ -47,7 +47,7 @@ body {
 }
 
 header {
-  height: max(100vh, 800px);
+  height: max(100vh, 600px);
   text-align: center;
   color: white;
   position: relative;
@@ -104,4 +104,85 @@ header a img {
   top: 50%;
   transform: translateY(-50%);
   height: 50px;
+}
+
+.main-container {
+  align-self: center;
+  margin: auto;
+  padding: 20px;
+  max-width: 1020px;
+}
+
+section {
+  margin: 20px 0 20px 0;
+}
+
+.header-container {
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.card {
+  margin: 2px;
+  padding: 10px;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: box-shadow 150ms ease-out, transform 200ms ease-out;
+}
+
+.card-large {
+  grid-column: span 2;
+  display: flex;
+  height: 300px;
+}
+
+.card-medium {
+  display: block;
+  height: 400px;
+}
+
+.img-container {
+  height: 110px;
+}
+
+.card-large img {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.card-medium a {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.card-medium img {
+  max-width: 300px;
+  max-height: 100px;
+}
+
+@media (max-width: 750px) {
+  .card-large {
+    display: block;
+  }
+
+  .card-medium {
+    grid-column: span 2;
+  }
 }
